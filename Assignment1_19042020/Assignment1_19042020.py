@@ -19,7 +19,6 @@ print(f"The result of {Number1} - {Number2} is {sub_result}")
 
 #Division of two numbers
 div_result = Number1 / Number2
-mod_result = Number1 % Number2 
 print(f"The result of {Number1} divided by {Number2} is {div_result}")
 
 #Multiplication of two numbers

@@ -11,7 +11,7 @@ TEST_PREPARATION_COL = 2
 MATH_SUBJECT_COL = 3
 READING_SUBJECT_COL = 4
 WRITING_SCORE_COL = 5
-
+File_Read = False
 Quit= False
 
 def Read_File(File_Path):
@@ -148,10 +148,12 @@ def FindHighestMarks():
         1. For Math
         2. For Reading
         3. For writing""")
+        
+        Subject_Key = {1:3,2:4,3:5}
         print(("-" * 40),end="\n\n")
         #input desired Subject.
         Subject_Req = int(input("Select Sbject: ")) 
-        if Subject_Req in [1,2,4]:
+        if Subject_Req in Subject_Key.keys():
             Subject_Key = {1:3,2:4,3:5}
             for Each_students in Student_Data_Read:
                 if max_Marks < int(Each_students[Subject_Key[Subject_Req]]):
@@ -247,7 +249,7 @@ def performPreparationBasedAnalysis():
         print(("-" * 40),end="\n\n")
         #input desired Subject.
         Subject_Req = int(input("Select Sbject: ")) 
-        if Prep_req in Prep.Keys() and Subject_Req in [3,4,5]:
+        if Prep_req in Prep_Keys.keys() and Subject_Req in [3,4,5]:
             Analyze_Performace_Based_on_Preparation(Student_Data_Read[:], Prep_Keys[Prep_req], Subject_Req)
         else:
             print("Invalid entry, Try again...")

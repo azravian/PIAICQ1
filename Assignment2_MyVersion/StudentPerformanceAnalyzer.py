@@ -154,7 +154,6 @@ def FindHighestMarks():
         #input desired Subject.
         Subject_Req = int(input("Select Sbject: ")) 
         if Subject_Req in Subject_Key.keys():
-            Subject_Key = {1:3,2:4,3:5}
             for Each_students in Student_Data_Read:
                 if max_Marks < int(Each_students[Subject_Key[Subject_Req]]):
                     max_Marks = int(Each_students[Subject_Key[Subject_Req]])
